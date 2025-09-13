@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "daea632c-448d-4c7f-a975-895c933a1d33",
+		"name": "heypico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "519342"
+	},
+	"item": [
+		{
+			"name": "search_places",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "heypico-api-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "5xuHkmNBdD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":\"hotel\",\n    \"location\":\"jakarta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/search_places",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search_places"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
