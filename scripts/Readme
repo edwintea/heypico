@@ -1,0 +1,59 @@
+# FastAPI Places Search API
+
+This FastAPI application provides a secured endpoint to search for places near a specified location using the Google Maps Places API. It leverages OpenAI's GPT-4 to refine user search queries for better results.
+
+---
+
+## Features
+
+- Secure API endpoint protected by a custom API key.
+- Accepts user queries and location names (address strings).
+- Uses OpenAI GPT-4 to enhance search queries.
+- Geocodes location names to latitude and longitude.
+- Searches nearby places using Google Maps Places API.
+- Returns top 5 places with embedded Google Maps and directions URLs.
+
+---
+
+## Requirements
+
+- Python 3.8+
+- FastAPI
+- httpx
+- python-dotenv
+- Pydantic
+
+---
+
+## Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/fastapi-places-search.git
+cd fastapi-places-search
+
+
+### how to run
+
+# Remove old venv if exists (optional)
+rm -rf .venv
+
+# Create a new virtual environment
+python3 -m venv .venv
+
+# Activate the virtual environment
+source .venv/bin/activate
+
+pip install --upgrade pip
+
+pip install fastapi uvicorn httpx python-dotenv
+
+final step:
+python -m uvicorn main:app --reload
+
+
+##running frontend:
+
+cd frontend
+npm start
